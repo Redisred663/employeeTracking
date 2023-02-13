@@ -1,14 +1,14 @@
 const { printTable } = require('console-table-printer');
 const express = require('express');
 const mysql = require('mysql2');
-// const apiRoutes = require('./js');
+const {inquireFunct} = require('./js/allEmployee');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-// app.use('/api', apiRoutes);
+app.use(inquireFunct);
 
 // connecting to db
 const db = mysql.createConnection(
@@ -27,6 +27,7 @@ app.get('/api/departments', () => {
     db.query(sql, (err, res) => {
         if (err) throw err;
         printTable(res);
+        inquireFunct();
     })
 });
 
