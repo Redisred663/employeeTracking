@@ -1,7 +1,7 @@
 # Employee Stalk-Tracker
 https://github.com/Redisred663
 ## Description
-A command line oriented way to keep a constant on all of your employees, including the managers!
+A command line oriented way to keep a constant watch on all of your employees, including the managers!
 # Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
